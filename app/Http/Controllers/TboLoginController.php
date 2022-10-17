@@ -35,8 +35,8 @@ class TboLoginController extends Controller
      echo "<pre>";
     print_r($data);
     echo "</pre>";
-       dd($data);
-       return redirect()->route('Authenticate');
+      // dd($data);
+       return view("Login",compact('data'));
        // $response = json_decode($response->getContent()) ;
 
 
