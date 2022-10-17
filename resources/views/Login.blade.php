@@ -10,9 +10,12 @@
 <body>
 
 
-
-    "<span class=sf-dump-key>TokenId</span>" => "<span class=sf-dump-str title="36 characters"></span>"
-
+    @foreach($data as $data)
+    <?php $infraction = json_decode(json_encode($data),TRUE); ?>
+    <tr>
+        <td>{{ $infraction["TokenId"] }}</td>
+    </tr>
+@endforeach
 
 </body>
 <script>
